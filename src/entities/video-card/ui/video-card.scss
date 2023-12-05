@@ -1,0 +1,94 @@
+.card-container {
+   display: flex;
+   flex-direction: column;
+   background: transparent;
+   align-items: start;
+   background: transparent;
+   gap: 10px;
+   flex-shrink: 0;
+
+   .image-container {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      border-radius: 15px;
+      .background {
+         background-image: url(../../../shared/assets/images/background.png);
+         width: 100%;
+      }
+
+      .base {
+         opacity: 0.8;
+         background: #000000;
+         display: none;
+         position: absolute;
+         height: 100%;
+         width: 100%;
+      }
+
+      .detail {
+         display: none;
+         height: inherit;
+
+         .detail-content {
+            padding: 24px 28px 34px 23px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .text {
+               color: #fff;
+               font-size: 14px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: 20px; /* 142.857% */
+            }
+         }
+      }
+   }
+
+   .info {
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px; /* 125% */
+   }
+}
+
+@media (min-width: 1440px) {
+   .image-container {
+      width: 488px;
+      height: 272px;
+      &:hover {
+         .base {
+            display: block;
+         }
+         .detail {
+            position: absolute;
+            display: flex;
+         }
+      }
+   }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+   .image-container {
+      width: 480px;
+      height: 270px;
+   }
+}
+
+@media (min-width: 744px) and (max-width: 1023px) {
+   .image-container {
+      width: 330px;
+      height: 186px;
+   }
+}
+
+@media (min-width: 375px) and (max-width: 743px) {
+   .image-container {
+      width: 240px;
+      height: 135px;
+   }
+}
